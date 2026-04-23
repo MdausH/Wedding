@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Guest List | Firdaus&Maisarah</title>
+  <meta
+    name="description"
+    content="Guest list and RSVP summary for Firdaus and Maisarah."
+  >
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Manrope:wght@400;500;600;700&display=swap"
+    rel="stylesheet"
+  >
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="site-shell">
+    <header class="hero guest-list-hero" id="top">
+      <nav class="topbar">
+        <a class="brand" href="index.html">F&M</a>
+        <div class="nav-links">
+          <a href="index.html#rsvp">RSVP</a>
+          <a href="index.html#wishes">Ucapan</a>
+        </div>
+      </nav>
+
+      <div class="hero-card guest-list-hero-card">
+        <p class="eyebrow">Guest List</p>
+        <h1>Senarai Tetamu</h1>
+        <p class="hero-copy">Semua RSVP yang dihantar akan muncul di sini pada browser yang sama.</p>
+      </div>
+    </header>
+
+    <main>
+      <section class="section forms-section">
+        <div class="forms-layout guest-list-layout">
+          <div class="panel">
+            <div class="wall-heading">
+              <div>
+                <p class="eyebrow">Summary</p>
+                <h3>RSVP Overview</h3>
+              </div>
+              <button id="guest-list-refresh" class="button button-secondary button-small" type="button">Refresh</button>
+            </div>
+
+            <div class="summary-grid">
+              <article>
+                <span id="rsvp-count">0</span>
+                <p>RSVPs</p>
+              </article>
+              <article>
+                <span id="named-count">0</span>
+                <p>Nama</p>
+              </article>
+              <article>
+                <span id="guest-total">0</span>
+                <p>Bilangan</p>
+              </article>
+            </div>
+
+            <div class="recent-card">
+              <h4>Latest RSVP</h4>
+              <p id="latest-rsvp">No RSVP submissions yet.</p>
+            </div>
+          </div>
+
+          <div class="panel">
+            <div class="wall-heading">
+              <div>
+                <p class="eyebrow">Details</p>
+                <h3>Guest Submissions</h3>
+              </div>
+            </div>
+            <p id="guest-list-feedback" class="form-feedback" aria-live="polite"></p>
+            <div class="table-wrap">
+              <table class="guest-table">
+                <thead>
+                  <tr>
+                    <th>Name</th>
+                    <th>Email</th>
+                    <th>Guests</th>
+                    <th>Notes</th>
+                    <th>Submitted</th>
+                    <th>Action</th>
+                  </tr>
+                </thead>
+                <tbody id="guest-list-rows">
+                  <tr>
+                    <td colspan="6">No RSVP submissions yet.</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+  </div>
+
+  <script src="scripts/supabase-config.js?v=20260422-2"></script>
+  <script src="scripts/guest-list.js?v=20260422-2"></script>
+</body>
+</html>
